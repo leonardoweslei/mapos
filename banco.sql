@@ -165,6 +165,13 @@ CREATE TABLE IF NOT EXISTS `os` (
   `dataInicial` DATE NULL DEFAULT NULL,
   `dataFinal` DATE NULL DEFAULT NULL,
   `garantia` VARCHAR(45) NULL DEFAULT NULL,
+
+  `dataExecucao` date NULL DEFAULT NULL,
+  `horaExecucaoInicial` time NULL DEFAULT NULL,
+  `horaExecucaoFinal` time NULL DEFAULT NULL,
+  `tipoAtendimento` TEXT NULL DEFAULT NULL,
+  `setorDepartamento` TEXT NULL DEFAULT NULL,
+
   `descricaoProduto` TEXT NULL DEFAULT NULL,
   `defeito` TEXT NULL DEFAULT NULL,
   `status` VARCHAR(45) NULL DEFAULT NULL,
@@ -197,6 +204,13 @@ CREATE TABLE IF NOT EXISTS `os` (
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
+
+ALTER TABLE os
+  add COLUMN `dataExecucao` date NULL DEFAULT NULL,
+  add COLUMN `horaExecucaoInicial` time NULL DEFAULT NULL,
+  add COLUMN `horaExecucaoFinal` time NULL DEFAULT NULL,
+  add COLUMN `tipoAtendimento` TEXT NULL DEFAULT NULL,
+  add COLUMN `setorDepartamento` TEXT NULL DEFAULT NULL;
 
 
 -- -----------------------------------------------------

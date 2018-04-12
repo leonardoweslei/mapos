@@ -169,6 +169,31 @@ $config = array('clientes' => array(array(
                                     'rules'=>'trim'
                                 ),
                                 array(
+                                    'field'=>'dataExecucao',
+                                    'label'=>'Data de Execução',
+                                    'rules'=>'trim'
+                                ),
+                                array(
+                                    'field'=>'horaExecucaoInicial',
+                                    'label'=>'Hora de Execução Inicial',
+                                    'rules'=>'trim'
+                                ),
+                                array(
+                                    'field'=>'horaExecucaoFinal',
+                                    'label'=>'Hora Execução Final',
+                                    'rules'=>'trim'
+                                ),
+                                array(
+                                    'field'=>'tipoAtendimento',
+                                    'label'=>'Tipo de Atendimento',
+                                    'rules'=>'trim'
+                                ),
+                                array(
+                                    'field'=>'setorDepartamento',
+                                    'label'=>'Setor/Departamento',
+                                    'rules'=>'trim'
+                                ),
+                                array(
                                     'field'=>'garantia',
                                     'label'=>'Garantia',
                                     'rules'=>'trim'
