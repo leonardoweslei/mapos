@@ -310,6 +310,14 @@ class Os extends CI_Controller
         $this->data['servicos'] = $this->os_model->getServicos($this->uri->segment(3));
         $this->data['emitente'] = $this->mapos_model->getEmitente();
 
+        if ($this->data['result']->horaExecucaoInicial == '00:00:00') {
+            $this->data['result']->horaExecucaoInicial = null;
+        }
+
+        if ($this->data['result']->horaExecucaoFinal == '00:00:00') {
+            $this->data['result']->horaExecucaoFinal = null;
+        }
+
         $this->data['view'] = 'os/visualizarOs';
         $this->load->view('tema/topo', $this->data);
     }
@@ -336,6 +344,14 @@ class Os extends CI_Controller
         $this->data['produtos'] = $this->os_model->getProdutos($this->uri->segment(3));
         $this->data['servicos'] = $this->os_model->getServicos($this->uri->segment(3));
         $this->data['emitente'] = $this->mapos_model->getEmitente();
+
+        if ($this->data['result']->horaExecucaoInicial == '00:00:00') {
+            $this->data['result']->horaExecucaoInicial = null;
+        }
+
+        if ($this->data['result']->horaExecucaoFinal == '00:00:00') {
+            $this->data['result']->horaExecucaoFinal = null;
+        }
 
         $this->load->view('os/imprimirOs', $this->data);
     }
