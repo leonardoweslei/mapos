@@ -324,7 +324,6 @@ $totalProdutos      = 0; ?>
 <script src="<?php echo base_url(); ?>assets/js/matrix.js"></script>
 <script>
     window.print();
-    window.close();
 </script>
 </body>
 </html>
